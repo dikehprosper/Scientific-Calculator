@@ -1,0 +1,58 @@
+if (this.innerHTML == "=") {
+    if(displayAnswer.innerHTML.toString().includes('tan')){
+        const term = displayAnswer.innerHTML.match(/\d+/g);
+        displayScreen.innerHTML = "Ans = " +  Math.tan(term)
+    }
+    else if(displayAnswer.innerHTML.toString().includes('Ans')){
+        let term = displayAnswer.innerHTML
+         displayAnswer.innerHTML = term.replace('Ans', term2)
+         function term2() {
+            let term1 = displayScreen.innerHTML
+           return term1.slice(5, term1.length)}
+    
+        displayScreen.innerHTML ="Ans = " +  eval(displayAnswer.innerHTML)
+    }
+    else if(displayAnswer.innerHTML.toString().includes('cos')){
+        const term = displayAnswer.innerHTML.match(/\d+/g);
+        displayScreen.innerHTML = "Ans = " + Math.cos(term)
+    }
+    
+    else if(displayAnswer.innerHTML.toString().includes('cosh')){
+        const term = displayAnswer.innerHTML.match(/\d+/g);
+        displayScreen.innerHTML = "Ans = " + Math.cosh(term)
+    }
+    else if(displayAnswer.innerHTML.toString().includes('tanh')){
+        const term = displayAnswer.innerHTML.match(/\d+/g);
+        displayScreen.innerHTML = "Ans = " + Math.tanh(term)
+    }
+    else if(displayAnswer.innerHTML.toString().includes('sin')){
+        const term = displayAnswer.innerHTML.match(/\d+/g);
+        displayScreen.innerHTML = "Ans = " + Math.sin(term)
+    }
+    
+    
+     
+    
+    
+     
+    } 
+    function answer1(){
+        let term = displayAnswer.innerHTML.slice(7, displayAnswer.length);
+        if(term.contains(')')){
+            return term.length-1;
+         }
+        else{
+         return term.length
+        } 
+    }
+        
+    else if(displayAnswer.innerHTML.toString().includes('sinh-1')){
+        const term = displayAnswer.innerHTML.slice(7, displayAnswer.length);
+        let answer2 = answer1()
+        displayScreen.innerHTML = "Ans = " + (term)
+        
+       
+        
+      
+       
+    }
