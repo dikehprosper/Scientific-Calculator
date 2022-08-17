@@ -102,11 +102,9 @@ function operation() {
       displayScreen.innerHTML = "Ans = " + eval(displayAnswer.innerText);
     }
   } else {
-    if (displayAnswer.length <= 18) {
-      displayAnswer.innerText += this.name;
-    } else {
-      displayAnswer.innerText += "x";
-    }
+
+    displayAnswer.innerText += this.name;
+
   }
 }
 
