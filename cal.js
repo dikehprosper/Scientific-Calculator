@@ -73,7 +73,7 @@ function operation() {
       const term = displayAnswer.innerHTML.match(/\d+/g);
       return (displayScreen.innerHTML = "Ans = " + Math.tanh(term));
     } else if (displayAnswer.innerHTML.toString().includes("sin-1")) {
-      const term = displayAnswer.innerHTML.slice(7, displayAnswer.length);
+      const term = displayAnswer.innerHTML.slice(6, displayAnswer.length);
       const term2 = term.match(/\d+/g);
 
       let term3 = 180 / Math.PI;
@@ -81,11 +81,12 @@ function operation() {
      
       return (displayScreen.innerHTML = "Ans =" + term4);
     } else if (displayAnswer.innerHTML.toString().includes("cos-1")) {
-      const term = displayAnswer.innerHTML.slice(7, displayAnswer.length);
+      const term = displayAnswer.innerHTML.slice(6, displayAnswer.length);
       const term2 = term.match(/\d+/g);
+     
       return (displayScreen.innerHTML = "Ans = " + Math.acos(term2));
     } else if (displayAnswer.innerHTML.toString().includes("tan-1")) {
-      const term = displayAnswer.innerHTML.slice(7, displayAnswer.length);
+      const term = displayAnswer.innerHTML.slice(6, displayAnswer.length);
       const term2 = term.match(/\d+/g);
       return (displayScreen.innerHTML = "Ans = " + Math.atan(term2));
     } else if (displayAnswer.innerHTML.toString().includes("sin")) {
